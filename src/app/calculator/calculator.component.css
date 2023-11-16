@@ -1,0 +1,15 @@
+.laskin {
+    width: 7cm;
+    height: 7cm;
+    margin-left: 42%;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+}
+
+.otsikko {
+    margin-left: 47%;
+    border-style: solid;
+    margin-right: 42%;
+    text-align: center;
+}
