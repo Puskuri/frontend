@@ -1,0 +1,27 @@
+<div class="otsikko">
+    <img id="header-logo" src="https://tse2.mm.bing.net/th?id=OIP.nxdvaIu-fzRC8beN5XGWEgHaGz&pid=Api&P=0&h=180">
+</div>
+
+<div class="haku">
+    <h1>UUTISIA</h1>
+    <input matInput placeholder="Kirjoita hakusana" [(ngModel)]="searchText">
+</div>
+
+<div class="cinema">
+    <mat-accordion>
+        <mat-expansion-panel class="cinema1" hideToggle *ngFor="let item of cinemaData | async  | pipe: searchText">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{item.Title}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{item.PublishDate}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>
+                {{item.HTMLLead}}
+            </p>
+            <img class="kuva" src="{{item.ImageURL}}" alt="Kuva">
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

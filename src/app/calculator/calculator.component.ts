@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-calculator',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './calculator.component.css'
 })
 export class CalculatorComponent {
+
+  constructor(private dataService: DataService) {
+    this.dataService.getData();
+  }
+
 
   tulos = "";
   result = "";

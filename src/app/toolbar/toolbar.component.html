@@ -1,1 +1,30 @@
-<p>toolbar works!</p>
+<mat-toolbar class="toolbar1">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon mat-button [matMenuTriggerFor]="belowMenu">menu</mat-icon>
+        <span>Front-End Tehtävät</span>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+            <div class="linkki">
+                <a routerLink="/**" routerLinkActive="active">Home</a>
+            </div>
+            <div class="linkki">
+                <a routerLink="/calculator" routerLinkActive="active">Laskin</a>
+            </div>
+            <div class="linkki">
+                <a routerLink="/slider" routerLinkActive="active">Salideri</a>
+            </div>
+            <div class="linkki">
+                <a routerLink="/cinema" routerLinkActive="active">Cinema</a>
+            </div>
+            <div class="linkki">
+                <a routerLink="/reactive-form" routerLinkActive="active">Reactive-Form</a>
+            </div>
+            <div class="linkki">
+                <a routerLink="/tempalte-driven-form" routerLinkActive="active">Tempalte-Driven-Form</a>
+            </div>
+            <div class="linkki">
+                <a routerLink="/AuthComponent" routerLinkActive="active">LogIn</a>
+            </div>
+        </mat-menu>
+    </button>
+    <span class="example-spacer"></span>
+</mat-toolbar>

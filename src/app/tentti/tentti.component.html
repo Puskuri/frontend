@@ -1,0 +1,42 @@
+Maatalousnäyttelyn 2024 liput
+
+<div class="slaideri1" *ngFor="let liput of liput">
+    <mat-slider class="slaideri2" step="1" min="0" max="3" (input)="onInputChange($event, liput)">
+        <input matSliderThumb>
+    </mat-slider>
+    <p class="p">kpl: {{ liput.kappale }}</p>
+</div>
+<p>
+
+</p>
+<form [formGroup]="profileForm" class="example-form">
+    <mat-form-field class="field-full-width">
+        <input matInput placeholder="first name" formControlName="FirstName">
+        <mat-error *ngIf="FirstName?.hasError('required')">Enter your first name</mat-error>
+        <mat-error *ngIf="FirstName?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="FirstName?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="field-full-width">
+        <input matInput placeholder="last name" formControlName="LastName">
+        <mat-error *ngIf="LastName?.hasError('required')">Enter your last name</mat-error>
+        <mat-error *ngIf="LastName?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="LastName?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="field-full-width">
+        <input matInput placeholder="email" formControlName="email">
+        <mat-error *ngIf="email?.hasError('required')">Enter your email/mat-error></mat-error>
+        <mat-error *ngIf="email?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="email?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+    Liput lähetetään tähän sähköpostiositteeseen!
+    <p></p>
+
+    <p></p>
+</form>
+<mat-slide-toggle>Olen Mtk:n jäsen</mat-slide-toggle>
+<p>
+    Yhteensä: {{this.tulos}}
+</p>
+<button mat-raised-button type="submit">Osta liput</button>

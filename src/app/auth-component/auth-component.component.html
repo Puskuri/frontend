@@ -1,0 +1,19 @@
+<form [profileForm]="FormGroup">
+    <mat-form-field class="field-full-width">
+        <input matInput placeholder="email" formControlName="email">
+        <mat-error *ngIf="email?.hasError('required')">Enter your email/mat-error></mat-error>
+        <mat-error *ngIf="email?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="email?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="field-full-width">
+        <input type="password" required matInput placeholder="password" formControlName="password">
+        <mat-error *ngIf="password?.hasError('required')">Enter your password</mat-error>
+        <mat-error *ngIf="password?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="password?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+
+    <button (click)="login()">Login</button>
+    <p></p>
+    <button (click)="cancel()">Cancel</button>
+</form>

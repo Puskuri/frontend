@@ -1,1 +1,7 @@
-<p>slider works!</p>
+<div class="slaideri1" *ngFor="let topic of topics">
+    <h4 class="otiskko">{{ topic.header }}</h4>
+    <mat-slider class="slaideri2" step="1" min="0" max="3" (input)="onInputChange($event, topic)">
+        <input matSliderThumb>
+    </mat-slider>
+    <p class="p">{{ topic.answer }}</p>
+</div>

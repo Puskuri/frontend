@@ -1,0 +1,56 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit">
+
+    <mat-form-field class="field-full-width">
+        <input matInput placeholder="first name" formControlName="FirstName">
+        <mat-error *ngIf="FirstName?.hasError('required')">Enter your first name</mat-error>
+        <mat-error *ngIf="FirstName?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="FirstName?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="field-full-width">
+        <input matInput placeholder="last name" formControlName="LastName">
+        <mat-error *ngIf="LastName?.hasError('required')">Enter your last name</mat-error>
+        <mat-error *ngIf="LastName?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="LastName?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="field-full-width">
+        <input matInput placeholder="email" formControlName="email">
+        <mat-error *ngIf="email?.hasError('required')">Enter your email/mat-error></mat-error>
+        <mat-error *ngIf="email?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="email?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="field-full-width">
+        <input matInput placeholder="UserName" formControlName="UserName">
+        <mat-error *ngIf="UserName?.hasError('required')">Enter your username</mat-error>
+        <mat-error *ngIf="UserName?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="UserName?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="field-full-width">
+        <input type="password" required matInput placeholder="password" formControlName="password">
+        <mat-error *ngIf="password?.hasError('required')">Enter your password</mat-error>
+        <mat-error *ngIf="password?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="password?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="field-full-width">
+        <input type="password" required matInput placeholder="confirmpassword" formControlName="confirmpassword">
+        <mat-error *ngIf="confirmpassword?.hasError('required')">Confirm your password</mat-error>
+        <mat-error *ngIf="confirmpassword?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="confirmpassword?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="field-full-width">
+        <input matInput placeholder="id" formControlName="id">
+        <mat-error *ngIf="id?.hasError('required')">Enter your id</mat-error>
+        <mat-error *ngIf="id?.hasError('minlenght')">Minimium 2 characters required</mat-error>
+        <mat-error *ngIf="id?.hasError('pattern')">Must be valid name</mat-error>
+    </mat-form-field>
+
+    <p></p>
+    <input type="checkbox" required>
+
+    <button mat-button type="onSubmit">Submit</button>
+</form>

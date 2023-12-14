@@ -1,0 +1,75 @@
+<form [formGroup]="personForm" (ngSubmit)="onSubmit()" class="form1">
+
+    <div class="form-group">
+        <label for="firstName">Etunimi</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+        <div *ngIf="personForm.get('firstName')!.invalid && personForm.get('firstName')">
+            <div *ngIf="personForm.get('firstName')!.errors"></div>
+            <div *ngIf="personForm.get('firstName')!.errors">
+            </div>
+            <div *ngIf="personForm.get('firstName')"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Sukunimi</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+        <div *ngIf="personForm.get('lastName')!.invalid && personForm.get('lastName')">
+            <div *ngIf="personForm.get('lastName')!.errors"></div>
+            <div *ngIf="personForm.get('lastName')!.errors">
+            </div>
+            <div *ngIf="personForm.get('lastName')"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Sähköposti</label>
+        <input type="email" class="form-control" id="email" formControlName="email" required>
+        <div *ngIf="personForm.get('email')!.invalid && personForm.get('email')">
+            <div *ngIf="personForm.get('email')!.errors"></div>
+            <div *ngIf="personForm.get('email')"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="username">Käyttäjätunnus</label>
+        <input type="text" class="form-control" id="username" formControlName="username" required>
+        <div *ngIf="personForm.get('username')!.invalid && personForm.get('username')">
+            <div *ngIf="personForm.get('username')!.errors"></div>
+            <div *ngIf="personForm.get('username')"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Salasana</label>
+        <input type="password" class="form-control" id="password" formControlName="password" required>
+        <div *ngIf="personForm.get('password')!.invalid && personForm.get('password')">
+            <div *ngIf="personForm.get('password')!.errors"></div>
+            <div *ngIf="personForm.get('password')"></div>
+            <div *ngIf="personForm.get('password')"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">Vahvista salasana</label>
+        <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword" required>
+        <div *ngIf="personForm.get('confirmPassword')!.invalid && personForm.get('confirmPassword')">
+            <div *ngIf="personForm.get('confirmPassword')!.errors"></div>
+            <div *ngIf="personForm.get('confirmPassword')!.errors"></div>
+            <div *ngIf="personForm.get('confirmPassword')"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="id">Henkilötunnus</label>
+        <input type="id" class="form-control" id="id" formControlName="id" required>
+        <div *ngIf="personForm.get('id')!.invalid && personForm.get('confirmPassword')">
+            <div *ngIf="personForm.get('id')!.errors"></div>
+            <div *ngIf="personForm.get('id')!.errors"></div>
+            <div *ngIf="personForm.get('id')"></div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!personForm.invalid">Rekisteröidy</button>
+
+</form>

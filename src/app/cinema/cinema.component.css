@@ -1,0 +1,27 @@
+.cinema {
+    margin-left: 20%;
+}
+
+.cinema1 {
+    width: 20cm;
+    height: auto;
+}
+
+.otsikko {
+    text-align: center;
+    color: rgb(242, 188, 52);
+}
+
+.kuva {
+    width: 20cm;
+    height: auto;
+    background-color: black;
+}
+
+.panel {
+    height: auto;
+}
+
+.haku {
+    margin-left: 40%;
+}
