@@ -11,15 +11,21 @@ export class AuthComponentComponent {
 
   profileForm: FormGroup;
   loginResult: any;
-  email: string | undefined;
-  password: string | undefined;
 
   constructor(private router: Router) {
     this.profileForm = new FormGroup({
-      email: new FormControl('t.t@g.fi', [Validators.required, Validators.email]),
-      password: new FormControl('s1', [Validators.required, Validators.minLength(2), Validators.pattern('^[-zA-Z ]*$')])
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(2), Validators.pattern('^[-zA-Z ]*$')])
     })
   }
+
+  get email() {
+    return this.profileForm.get('password')
+  };
+
+  get password() {
+    return this.profileForm.get('password')
+  };
 
   login() {
     if (this.loginResult.invalid && this.email == this.password) {
