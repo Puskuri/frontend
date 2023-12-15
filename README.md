@@ -1,5 +1,10 @@
 # Frontend23
 
+SOVELLUKSESTA LÖYTYY TOOLBAR, JOSSA LINKIT JOKAISEEN TEHTYYN SIVUUN. SIVUILLA ON ERILAISIA SOVELLUKSIA JOIHIN KAIKKIIN ON KÄYTETTY ANGULAR 17 VERSIOTA. ETUSIVULLA EI OLE JUURIKAAN MITÄÄN. TEHTÄVIÄ OVAT MM. LASKIN. FINNKINOUUTISET, 2 ERILAISTA LOMAKETTA, PALAUTESIVU, KIRJAUTUMINEN ADMIN NÄKYMÄÄN(kesken, ei toimi sillä en saanut firebasea toimimaan).
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
 ## Development server
